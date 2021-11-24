@@ -1,0 +1,128 @@
+:root{
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+
+--very-dark-blue1: hsl(217, 54%, 11%); /*Main background */
+--very-dark-blue2: hsl(216, 50%, 16%); /*Card background */
+--very-dark-blue3: hsl(215, 32%, 27%); /* line */
+--white: hsl(0, 0%, 100%);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--very-dark-blue1);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.13rem;
+    height: 100vh;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    max-width: 20.63rem;
+    padding: 1.25rem;
+    background-color: var(--very-dark-blue2);
+    color: var(--soft-blue);
+    border-radius: 0.63rem;
+}
+
+.hero-image-container{
+    height: 18.8rem;
+    position: relative;
+}
+
+.hero-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.63rem;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 255, 247, .3);
+  border-radius: 0.63rem;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.overlay:hover{
+  opacity: 1;
+}
+
+.card-heading{
+    padding: 1.3rem 0;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.uses{
+    margin-bottom: 1.3rem;
+    line-height: 1.5;
+}
+
+.other-info{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--very-dark-blue3);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.crypto-amount{
+    margin-right: auto;
+    margin-left: 0.63rem;
+    font-weight: bold;
+    color: var(--cyan);
+}
+
+.days-left{
+    margin-left: 0.63rem;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic{
+    display: block;
+    width: 2.5rem;
+    margin-right: 1.25rem;
+}
+
+.name{
+    color: var(--white);
+    cursor: pointer;
+}
+
+.card-heading:hover, .name:hover{
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.attribution{
+  font-size: .8rem;
+  margin-top: 1.25rem;
+  color: var(--white);
+}
+
+.attribution a:link, a:visited{
+  color: var(--cyan);
+}
